@@ -1,0 +1,76 @@
+In manual:
+* !! menu keys still right?
+* talk about `sym` (grid section?)
+
+## Old bugs
+* (can't reproduce) saw interactive_transform/merge/weave bug
+* weird event bugs in miniter (rctl or ctl-bksp) (MATE specific?)
+* crash due to 0 points grid? (fixed I think)
+* bug computing divs for polys: wrong size (fixed by rewrite?)
+
+## Bugs
+(3) arcs div too far (slightly)? ("solved" by restricting max zoom)
+
+#DONE
+* modify quick transforms 
+* refactor with math util (mostly)
+* arc other order (ortho proj)
+
+# Current batch
+
+(details)
+* not-in-use command
+
+* save/load palette
+* add related commands hints (n, dfdivs for shapes; imh, ext for exporting images)
+* auto ps2pdf?
+
+* rename menu buttons (more consistent / make more sense)
+
+* raise-group command?
+* scroll through stash?
+* export image of rectangle
+
+----- counts as "finished" (v0.2)
+
+* set params from the terminal, all params are dynamic
+* erase hint messages when hooks close
+* export image: rectangle
+* in stash, option to use wheel for <=>
+
+# Extra+
+
+* pinned commands
+* macros
+* cartesian grid, triangle grid
+* bezier curves, ellipses (+ arcs)?
+* polygon selection?
+
+* command line args: 
+	basic: open first arg --norc --noconf --session= --cl --wd=
+* remappable menu?
+* menu actions via commands?
+
+# Extra++
+* several canvas, move shapes between them.
+* connect shapes
+
+* sync with save file ( I don't think this really works )
+* refactor terminal, (autocomplete, history, types, etc)
+
+# Extra+++
+* select weaves individually 
+* (drawing weaves) in subview, split ambiguous shapes
+* arbitrary linear transforms
+* gradient weaves (rainbow or lerp, maybe multipoint)
+* multiweaves
+* some scripting?
+* weave string can bend around nails?
+
+# details:
+* refactor transforms + sym command : in context copy shapes utils
+* grid sparseness adjustment should be exponential
+* only consider the last MOUSEMOTION every frame ?
+* maybe don't draw circle-center on existing shapes, merge points into shapes? (problem: when?)
+* (PITA refactor): corner of view should be bottom-left for real (which get converted to top-left for pixel)
+* view logic unclever: corner should be **bottom** left (real) which is top-left (pixels)
