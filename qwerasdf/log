@@ -1,3 +1,0 @@
-* fix polyline bug, crash if create with 0 point.
-  could do it via New -> rclick instantly
-* fix merge bug when merging existing shapes
